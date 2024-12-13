@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Mental Health Survey</title>
+  <link rel="stylesheet" href="1.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Mental Health Survey</h1>
+      <p>Help us understand and improve student well-being!</p>
+    </header>
+
+    <!-- Login Section -->
+    <section id="loginSection">
+      <h1>Admin Login</h1>
+      <p>Please log in to proceed.</p>
+      <button>user login</button>
+      <label for="username">Username:</label>
+      <input type="text" id="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required><br>
+      <button id="loginButton">Login</button>
+      <button id="showWebsiteButton" style="display: none;">Show Website</button>
+    </section>
+
+    <!-- Dashboard Section (Sensitive Information) -->
+    <section id="dashboardSection" style="display: none;">
+      <h2>Dashboard</h2>
+      <p>Welcome, Devlopers! Here are the sensitive details:</p>
+      <p>Public Pin: [CUIp5b4nQ7IK81p53]</p>
+      <p>Service Pin: [service_0cq9fcs]</p>
+      <p>Template Pin: [template_c8n3wpr]</p>
+      <p>Gmail: [asus911991@gmail.com]</p>
+      <p>password for gmail:[Can_website]</p>
+      <p>suggestion gmail:[devloper116@gmail.com]</p>
+      <P>password:[Website_can]</P>
+    </section>
+
+    <!-- Normal website content section -->
+    <section id="normalWebsiteSection" style="display: none;">
+      <h2>Welcome to our website!</h2>
+     
+
+      <!-- Survey Section -->
+      <section id="surveySection">
+        <h2>Depleting Mental Health in Students</h2>
+        <form id="surveyForm">
+          <div class="info">
+            <p>
+              Enter your details:<br>
+              Name: <input type="text" name="name" required><br>
+              Roll No: <input type="text" name="rollNo" required><br>
+              School/College: <input type="text" name="school" required><br>
+              Gender: <input type="text" name="gender" required><br>
+              Mobile No.: <input type="number" name="mobile" required minlength="10" maxlength="10"><br>
+              Age: <input type="number" name="age" required><br>
+            </p>
+          </div>
+
+          <!-- Questions -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q1. How often do you feel stressed?</h3>
+            </div>
+            <div class="options">
+              <label><input type="radio" name="q1" value="Never" required> Never</label><br>
+              <label><input type="radio" name="q1" value="Sometimes"> Sometimes</label><br>
+              <label><input type="radio" name="q1" value="Often"> Often</label><br>
+              <label><input type="radio" name="q1" value="Always"> Always</label><br>
+            </div>
+          </div>
+         <!-- Question 2 -->
+         <div class="question-container">
+          <div class="question">
+            <h3>Q2.Do you ever feel sad or down?</h3>
+          </div>
+          <div class="options">
+            <label><input type="radio" name="q2" value="Yes"> YES</label><br>
+            <label><input type="radio" name="q2" value="NO"> NO</label><br>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question-container">
+          <div class="question">
+            <h3>Q3.Do you feel anxious before tests or assignments?</h3>
+          </div>
+          <div class="options">
+            <label><input type="radio" name="q3" value="YES"> YES</label><br>
+            <label><input type="radio" name="q3" value="NO"> NO</label><br>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question-container">
+          <div class="question">
+            <h3>Q4.How often do you feel tired during the day?</h3>
+          </div>
+          <div class="options">
+            <label><input type="radio" name="q4" value="Never"> Never</label><br>
+            <label><input type="radio" name="q4" value="Sometimes"> Sometime </label><br>
+            <label><input type="radio" name="q4" value="Often"> Often</label><br>
+            <label><input type="radio" name="q4" value="Always"> Always</label><br>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question-container">
+          <div class="question">
+            <h3>Q5.Do you talk to someone when you're feeling upset?</h3>
+          </div>
+          <div class="options">
+            <label><input type="radio" name="q5" value="YES">YES </label><br>
+            <label><input type="radio" name="q5" value="NO"> NO</label><br>
+          </div>
+        </div>
+        <!-- Question 6 --> 
+        <div class="question-container">
+            <div class="question">
+              <h3>Q6.Do you feel comfortable asking for help with your mental health?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q6" value="YES">YES </label><br>
+                <label><input type="radio" name="q6" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 7 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q7.How often do you feel happy at school?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q7" value="Never"> Never</label><br>
+                <label><input type="radio" name="q7" value="Sometimes"> Sometime </label><br>
+                <label><input type="radio" name="q7" value="Often"> Often</label><br>
+                <label><input type="radio" name="q7" value="Always"> Always</label><br>
+            </div>
+          </div>
+        <!-- Question 8  -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q8.Do you feel lonely at school?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q8" value="YES">YES </label><br>
+                <label><input type="radio" name="q8" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 9 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q9.Do you find it easy to relax after school?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q9" value="YES">YES </label><br>
+                <label><input type="radio" name="q9" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 10 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q10.Do you feel that schoolwork causes you stress?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q10" value="YES">YES </label><br>
+                <label><input type="radio" name="q10" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 11 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q11.How often do you get enough sleep?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q11" value="Never"> Never</label><br>
+                <label><input type="radio" name="q11" value="Sometimes"> Sometime </label><br>
+                <label><input type="radio" name="q11" value="Often"> Often</label><br>
+                <label><input type="radio" name="q11" value="Always"> Always</label><br>
+            </div>
+          </div>
+        <!-- Question 12 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q12.Do you feel like school is too much pressure?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q12" value="YES">YES </label><br>
+                <label><input type="radio" name="q12" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 13 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q13.Do you feel safe and supported at school?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q13" value="YES">YES </label><br>
+                <label><input type="radio" name="q13" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 14 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q14.Do you have friends you can talk to when you're upset?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q14" value="YES">YES </label><br>
+                <label><input type="radio" name="q14" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 15 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q15.Do you think social media affects your mood?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q15" value="YES">YES </label><br>
+                <label><input type="radio" name="q15" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 16 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q16.Have you ever felt like you need mental health support?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q16" value="YES">YES </label><br>
+                <label><input type="radio" name="q16" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 17 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q17.Do you feel stressed about balancing school and other activities?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q17" value="YES">YES </label><br>
+                <label><input type="radio" name="q17" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 18 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q18.Do you enjoy your classes most of the time?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q18" value="YES">YES </label><br>
+                <label><input type="radio" name="q18" value="NO"> NO</label><br>
+            </div>
+          </div>
+        <!-- Question 19 -->
+          <div class="question-container">
+            <div class="question">
+              <h3>Q19.Do you know where to go for help if you're feeling mentally unwell at school?</h3>
+            </div>
+            <div class="options">
+                <label><input type="radio" name="q19" value="YES">YES </label><br>
+                <label><input type="radio" name="q19" value="NO"> NO</label><br>
+            </div>
+          </div>
+                                 
+
+        <!-- Question 20 -->
+        <div class="question-container">
+          <div class="question">
+            <h3>Q20.Do you feel your school is doing enough to support student mental health?</h3>
+          </div>
+          <div class="options">
+            <label><input type="radio" name="q20" value="YES">YES </label><br>
+            <label><input type="radio" name="q20" value="NO"> NO</label><br>
+          </div>
+        </div>
+
+         <!-- Personal Experience Question -->
+         <div class="question-container">
+          <div class="question">
+              <h3>Q21.Please share how you're feeling so that we can offer the support you need.</h3>
+          </div>
+          <div class="options">
+              <textarea name="personalExperience" rows="5" cols="40" required></textarea>
+          </div>
+        </div>
+
+          <button type="submit">Submit Answers</button>
+        </form>
+      </section>
+    </section>
+
+    <!-- Footer and Contact Info -->
+    <footer>
+      <p>Teachers can access the responses.</p>
+    </footer>
+
+    <footer>
+      "Crafted with 💻 and passion by:<br>
+      UMANG KUMAR SINGH<br> & SUMIT CHOUDHARY"
+    </footer>
+
+    <footer>
+      <p>"Your thoughts matter to us! Feel free to share your personal experience on how we can improve our website"</p>
+      <button id="contactButton" onclick="window.location.href='mailto:devloper116@gmail.com.com?subject=Support Request&body=Please describe your issue here.'">
+        Contact Us via Email
+      </button>
+    </footer>
+  </div>
+
+  <script src="1.js"></script>
+</body>
+</html>
